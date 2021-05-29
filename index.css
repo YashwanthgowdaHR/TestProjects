@@ -1,0 +1,253 @@
+@import url("utility.css");
+
+:root {
+	--primary: #eac263;
+	--secondary: #f2aa4c;
+	--ternary: #22183a;
+	--fourth: #46344e;
+	--dark: #000;
+	--pure: #fafafa;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	background-color: var(--dark);
+	background-image: url("gif4.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: auto;
+}
+
+/* 
+
+Header, Navigation part ---------------------------------------------------------------------------->
+
+*/
+
+.headerContainer {
+	max-width: 420px;
+	margin: auto;
+	padding: 0;
+	height: auto;
+}
+
+header nav {
+	margin: 0;
+	width: 100%;
+	max-height: 100px;
+	padding: 10px 0;
+	border: 1px solid var(--ternary);
+	border-top: 0;
+	border-radius: 0px 0px 10px 10px;
+	transform: translateY(-100%);
+	transition: transform 0.5s;
+	will-change: transform;
+	position: relative;
+}
+
+header .menu {
+	width: 100%;
+	justify-content: center;
+}
+
+header nav a {
+	font-size: 12px;
+	padding: 5px 10px;
+	color: var(--pure);
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-right: 1rem;
+	position: relative;
+}
+
+header nav a:last-child {
+	margin-right: 0;
+}
+
+header nav a::before,
+header nav a::after {
+	content: "";
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	height: 1px;
+	background: var(--primary);
+	opacity: 0;
+	transition: all 0.5s;
+}
+
+header nav a::before {
+	top: 0px;
+	transform: translateY(10px);
+}
+
+header nav a::after {
+	bottom: 0px;
+	transform: translateY(-10px);
+}
+
+header nav a:hover:before,
+header nav a:hover:after {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+header .container-button {
+	position: fixed;
+	margin: auto;
+	padding: 0;
+	top: 42px;
+	width: 70px;
+	height: 40px;
+	background: transparent;
+	left: calc(100% - 56%);
+}
+
+header .container-button .close {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background: var(--ternary);
+	cursor: pointer;
+	border: none;
+	position: relative;
+	top: 4px;
+	shape-outside: polygon(0 0, 100% 0%, 50% 50%);
+	clip-path: polygon(0 0, 100% 0%, 50% 100%);
+}
+
+header .container-button .close svg {
+	width: 20px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	top: -5px;
+	transition: all 2s 1s;
+}
+
+header .container-button .close svg path {
+	transition: all 1s 0.1s;
+}
+
+/*
+mainContainer ----------------------------------------------------------------------------------->
+*/
+
+.container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	color: var(--primary);
+}
+
+.container audio {
+	display: none;
+	visibility: hidden;
+}
+
+main {
+	width: 100%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 10px;
+	transform: translate(-50%, -50%);
+}
+
+/*Machine learning */
+main .sub {
+	font-family: neon;
+	font-size: 16px;
+	text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
+		0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
+		0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
+		0 0 60px rgba(30, 132, 242, 1);
+	color: #28d7fe;
+}
+
+main .heading {
+	width: 100%;
+	padding: 0;
+	align-items: center;
+}
+/*"Old English text MT", "Matura MT Script capitals"*/
+
+@font-face {
+	font-family: neon;
+	src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+main .heading .bold {
+	font-size: 150%;
+	color: var(--primary);
+	-webkit-text-stroke: 0.8px var(--pure);
+	-webkit-text-fill-color: transparent;
+	-webkit-text-size-adjust: 0;
+	font-family: "Request personal use";
+	text-shadow: 0 0 1vw var(--primary), 0 0 5vw var(--primary), 0 0 10vw #faed26,
+		0 0 5vw #faed26, 0.5vw 0.5vw 0.1vw #fe25;
+	filter: saturate(200%) hue-rotate(100deg);
+}
+
+main .heading .notbold {
+	font-family: "Old English text MT", "Matura MT Script capitals";
+	font-size: 150%;
+	margin-left: 20px;
+	text-shadow: 0 0 0.4vw #fed128;
+	color: #fed128;
+}
+
+main p {
+	font-size: 1rem;
+	color: var(--secondary);
+}
+
+main .sub-part {
+	margin: -10px;
+	padding: 10px 20px;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: "Victor Mono";
+	color: var(--pure);
+}
+
+main .readMoreBtn {
+	margin: 0;
+	margin-top: 10px;
+	padding: 0;
+}
+
+main .readMoreBtn a {
+	margin: 0;
+	padding: 5px 10px;
+	color: var(--primary);
+	text-decoration: none;
+	border: 0 solid;
+	box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+	outline: 0.5px solid;
+	outline-color: var(--secondary);
+	outline-offset: 0px;
+	text-shadow: none;
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+main .readMoreBtn a:hover {
+	border: 1px solid;
+	box-shadow: inset 0 0 5px #f2aa4ccc, 0 0 10px #f2aa4caa;
+	outline-color: rgba(255, 255, 255, 0);
+	outline-offset: 10px;
+	text-shadow: 1px 1px 2px #427388;
+}

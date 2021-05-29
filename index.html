@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+    <head>
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, shrink-to-fit=no' />
+        <title></title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="icon" href="./favicon.ico" />
+    </head>
+
+    <body>
+        <!-- Header block -->
+        <header>
+            <div class="headerContainer">
+                <nav id="nav" class="flex items-center">
+                    <div class="menu flex items-center">
+                        <a href="#" onmouseover="playAudio('sounds/button-19.mp3');">Home</a>
+                        <a href="#" onmouseover="playAudio('sounds/button-19.mp3');">Upload</a>
+                        <a href="#" onmouseover="playAudio('sounds/button-19.mp3');">Train&Test</a>
+                        <a href="#" onmouseover="playAudio('sounds/button-19.mp3');">Files</a>
+                    </div>
+                    <div id="buttonContainer" class="container-button">
+                        <button id="close" class="close" onclick="playAudio('sounds/button-29.mp3');">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 58.5 37.3"
+                                enable-background="new 0 0 58.5 37.3" xml:space="preserve">
+                                <path id="buttonPath" fill-rule="evenodd" clip-rule="evenodd" fill="#fff"
+                                    d="M55.4,10.8L33.1,33c-1.8,2-5,2-6.9,0L4.1,10.8  c-2.1-2-2.6-4.6-0.5-6.6l0.8-0.8c1.8-1.7,3.8-2.1,5.5-0.3c5.4,5.5,10.8,11,16.3,16.5c1.9,1.8,5,1.8,6.9,0c5.5-5.5,11-11,16.5-16.5  c1.5-1.7,3.6-1.4,5.3,0.3l0.8,0.8C57.7,6.2,57.2,8.9,55.4,10.8L55.4,10.8z" />
+                            </svg>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="container" id="mainContainer">
+            <main class="block items-center text-center">
+                <p class="sub">( Machine Learning )</p>
+                <h1 class="heading" id="heading">
+                    <span class="bold">Gender Idenification</span><span class="notbold">by Voice</span>
+                </h1>
+                <p class="sub-part">
+                    is useful in speech-based recognition systems which employ gender-dependent models.<br />
+                    ( Models-used: KNN, RandomForest, SVM, NaiveBayes. )
+                </p>
+                <div class="readMoreBtn">
+                    <a href="about.html" id="readMoreBtn"
+                        onmouseover="playAudio('sounds/mixkit-sci-fi-click-900.wav');">
+                        <span>Read More</span>
+                    </a>
+                </div>
+            </main>
+        </div>
+
+        <!-- Script block -->
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+
+</html>
