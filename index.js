@@ -19,7 +19,6 @@ function playAudio(src) {
 		audioTag.src = src;
 		mainContainer.appendChild(audioTag);
 	} else {
-		console.log(isPlaying);
 		if (isPlaying) {
 			audioTag.pause();
 			isPlaying = false;
