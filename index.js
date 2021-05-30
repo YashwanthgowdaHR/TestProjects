@@ -6,17 +6,36 @@ function getId(element) {
 
 let readMoreBtn = getId("readMoreBtn");
 let buttonPath = getId("buttonPath");
+let isPlaying = false;
 
 function playAudio(src) {
 	let mainContainer = getId("mainContainer");
-	let audioTag = document.createElement("audio");
-	audioTag.src = src;
-	mainContainer.appendChild(audioTag);
+	let audioTag;
+	audioTag = document.getElementById("myaudio");
+	if (audioTag == null) {
+		audioTag = document.createElement("audio");
+		audioTag.setAttribute("id", "myaudio");
+		audioTag.src = src;
+		mainContainer.appendChild(audioTag);
+	} else {
+		console.log(isPlaying);
+		if (isPlaying) {
+			audioTag.pause();
+			isPlaying = false;
+			audioTag.src = "";
+			audioTag.src = src;
+		}
+	}
+
 	try {
 		audioTag.play(); //Quicktime, Windows Media Player, etc.
 	} catch (e) {
+		audioTag.pause();
 		console.log("Error: ", e); //Real Player
 	}
+	audioTag.onplaying = () => {
+		isPlaying = true;
+	};
 }
 
 document.getElementById("close").addEventListener("click", function () {
