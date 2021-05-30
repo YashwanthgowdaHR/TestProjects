@@ -254,6 +254,8 @@ main .sub-part {
 	font-family: Victor Mono;
 	color: var(--pure);
 	text-justify: justify;
+	backdrop-filter: saturate(200%) hue-rotate(0deg);
+	-webkit-backdrop-filter: saturate(200%) hue-rotate(0deg);
 }
 
 main .readMoreBtnContainer {
