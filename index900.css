@@ -52,7 +52,6 @@ body {
 	background-position: center;
 	background-size: contain;
 }
-
 /* 
 
 Header, Navigation part ---------------------------------------------------------------------------->
@@ -60,83 +59,90 @@ Header, Navigation part --------------------------------------------------------
 */
 
 header {
-	max-width: 420px;
-	margin: auto;
-	padding: 0;
+	width: 140px;
 	height: auto;
+	padding: 0;
+	position: fixed;
+	top: 50%;
+	left: 0;
+	transform: translate(0%, -50%);
+	z-index: 1000;
 }
 
 header nav {
-	margin: 0;
 	width: 100%;
-	max-height: 100px;
-	padding: 10px 0;
+	margin: 0;
 	border: 1px solid var(--ternary);
-	border-top: 0;
-	border-radius: 0px 0px 10px 10px;
-	transform: translateY(-100%);
+	border-left: 0;
+	border-radius: 0px 10px 10px 0px;
+	transform: translateX(-100%);
 	transition: transform 0.5s;
 	will-change: transform;
-	position: relative;
+	background: #22183acc;
 }
 
 header .menu {
+	margin: 0;
+	padding: 0;
 	width: 100%;
+	height: 100%;
+	flex-direction: column;
 	justify-content: center;
 }
 
 header nav a {
-	font-size: 12px;
-	padding: 5px 10px;
+	margin: 0;
+	width: 100%;
+	font-size: 1em;
 	color: var(--pure);
 	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin-right: 1rem;
 	position: relative;
-}
-
-header nav a:last-child {
-	margin-right: 0;
+	margin: 8px;
+	padding: 3px;
 }
 
 header nav a::before,
 header nav a::after {
 	content: "";
 	position: absolute;
-	left: 0px;
-	width: 100%;
-	height: 1px;
-	background: var(--primary);
+	width: 0px;
+	height: 100%;
+	background: #eac26355;
 	opacity: 0;
+	top: 0px;
 	transition: all 0.5s;
 }
 
 header nav a::before {
-	top: 0px;
-	transform: translateY(10px);
+	left: 5px;
+	transform: translateX(15px);
+	border-left: 1px solid var(--primary);
 }
 
 header nav a::after {
-	bottom: 0px;
-	transform: translateY(-10px);
+	right: 5px;
+	transform: translateX(-15px);
+	border-right: 1px solid var(--primary);
 }
 
 header nav a:hover:before,
 header nav a:hover:after {
 	opacity: 1;
-	transform: translateY(0px);
+	width: 90%;
+	transform: translateX(0px);
 }
 
 header .container-button {
 	position: fixed;
 	margin: auto;
 	padding: 0;
-	top: 42px;
-	width: 70px;
-	height: 40px;
+	left: 100%;
+	width: 50px;
+	height: 60px;
 	background: transparent;
-	left: calc(100% - 56%);
+	top: 30%;
 }
 
 header .container-button .close {
@@ -147,15 +153,15 @@ header .container-button .close {
 	cursor: pointer;
 	border: none;
 	position: relative;
-	top: 4px;
-	shape-outside: polygon(0 0, 100% 0%, 50% 50%);
-	clip-path: polygon(0 0, 100% 0%, 50% 100%);
+	padding: 0;
+	shape-outside: polygon(0 0, 50% 50%, 0 100%);
+	clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
-.down-arrow::before,
-.down-arrow::after,
-.up-arrow::before,
-.up-arrow::after {
+.left-arrow::before,
+.left-arrow::after,
+.right-arrow::before,
+.right-arrow::after {
 	content: "";
 	position: absolute;
 	width: 20%;
@@ -165,30 +171,27 @@ header .container-button .close {
 	border-right: 2px solid currentcolor;
 	border-bottom: 2px solid currentcolor;
 	transition: all 0.5s;
+	left: 12px;
 }
 
-.down-arrow::before {
-	top: 16px;
-	left: 22px;
-	transform: rotate(45deg);
-}
-
-.down-arrow::after {
-	top: 16px;
-	right: 22px;
+.left-arrow::before {
+	top: 25px;
 	transform: rotate(-45deg);
 }
 
-.up-arrow::before {
-	top: 12px;
-	left: 22px;
-	transform: rotate(-45deg);
+.left-arrow::after {
+	bottom: 25px;
+	transform: rotate(45deg);
 }
 
-.up-arrow::after {
-	top: 12px;
-	right: 22px;
+.right-arrow::before {
+	top: 25px;
 	transform: rotate(45deg);
+}
+
+.right-arrow::after {
+	bottom: 25px;
+	transform: rotate(-45deg);
 }
 
 /*
@@ -221,7 +224,7 @@ main {
 /*Machine learning */
 main .sub {
 	font-family: neon;
-	font-size: 16px;
+	font-size: 0.7em;
 	text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
 		0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
 		0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
@@ -234,7 +237,7 @@ main .sub {
 main .heading {
 	width: 100%;
 	padding: 0;
-	align-items: center;
+	font-size: 28px;
 	color: var(--primary);
 	-webkit-text-stroke: 0.8px var(--pure);
 	-webkit-text-fill-color: transparent;
@@ -245,9 +248,9 @@ main .heading {
 }
 
 main .sub-part {
-	margin: -10px;
+	margin: -5px;
 	padding: 10px 20px;
-	font-size: 14px;
+	font-size: 0.8em;
 	text-transform: uppercase;
 	font-family: Victor Mono;
 	color: var(--pure);
@@ -258,7 +261,7 @@ main .readMoreBtnContainer {
 	width: auto;
 	height: auto;
 	margin: 0;
-	margin-top: 20px;
+	margin-top: 10px;
 	padding: 0;
 }
 
