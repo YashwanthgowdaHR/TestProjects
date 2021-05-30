@@ -38,7 +38,7 @@ function playAudio(src) {
 	};
 }
 
-if (window.innerWidth < 900) {
+if (window.innerWidth < 1100) {
 	closeSpan.setAttribute("class", "right-arrow");
 	closeBtn.addEventListener("click", function () {
 		if (isButtonDown == false || isButtonDown == null) {
