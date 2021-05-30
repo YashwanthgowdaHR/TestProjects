@@ -93,7 +93,7 @@ header .menu {
 header nav a {
 	margin: 0;
 	width: 100%;
-	font-size: 1em;
+	font-size: 15px;
 	color: var(--pure);
 	text-align: center;
 	text-decoration: none;
@@ -224,7 +224,7 @@ main {
 /*Machine learning */
 main .sub {
 	font-family: neon;
-	font-size: 0.55em;
+	font-size: 9px;
 	text-shadow: 0 0 6px rgba(202, 228, 225, 0.98),
 		0 0 30px rgba(202, 228, 225, 0.42), 0 0 12px rgba(30, 132, 242, 0.58),
 		0 0 22px rgba(30, 132, 242, 0.84), 0 0 38px rgba(30, 132, 242, 0.88),
@@ -237,7 +237,7 @@ main .sub {
 main .heading {
 	width: 100%;
 	padding: 0;
-	font-size: 24px;
+	font-size: 20px;
 	color: var(--primary);
 	-webkit-text-stroke: 0.8px var(--pure);
 	-webkit-text-fill-color: transparent;
@@ -251,7 +251,7 @@ main .heading {
 main .sub-part {
 	margin: -5px;
 	padding: 10px 20px;
-	font-size: 0.65em;
+	font-size: 9px;
 	text-transform: uppercase;
 	font-family: Victor Mono;
 	color: var(--pure);
