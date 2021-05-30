@@ -9,13 +9,38 @@
 	--pure: #fafafa;
 }
 
+@font-face {
+	font-family: Poppins;
+	src: url("./fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+	font-family: neon;
+	src: url("./fonts/neon.ttf");
+}
+
+@font-face {
+	font-family: Victor Mono;
+	src: url("./fonts/VictorMono-Regular.ttf");
+}
+
+@font-face {
+	font-family: Request personal use;
+	src: url("./fonts/RequestPersonalUse.ttf");
+}
+
+@font-face {
+	font-family: Old English text MT;
+	src: url("./fonts/OLDENGL.TTF");
+}
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
 	-webkit-font-smoothing: antialiased;
-	font-family: "Poppins", sans-serif;
+	font-family: Poppins, sans-serif;
 }
 
 body {
@@ -185,25 +210,20 @@ main .heading {
 }
 /*"Old English text MT", "Matura MT Script capitals"*/
 
-@font-face {
-	font-family: neon;
-	src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
-}
-
 main .heading .bold {
 	font-size: 150%;
 	color: var(--primary);
 	-webkit-text-stroke: 0.8px var(--pure);
 	-webkit-text-fill-color: transparent;
 	-webkit-text-size-adjust: 0;
-	font-family: "Request personal use";
+	font-family: Request personal use;
 	text-shadow: 0 0 1vw var(--primary), 0 0 5vw var(--primary), 0 0 10vw #faed26,
 		0 0 5vw #faed26, 0.5vw 0.5vw 0.1vw #fe25;
 	filter: saturate(200%) hue-rotate(100deg);
 }
 
 main .heading .notbold {
-	font-family: "Old English text MT", "Matura MT Script capitals";
+	font-family: Old English text MT, "Matura MT Script capitals";
 	font-size: 150%;
 	margin-left: 20px;
 	text-shadow: 0 0 0.4vw #fed128;
@@ -220,7 +240,7 @@ main .sub-part {
 	padding: 10px 20px;
 	font-size: 14px;
 	text-transform: uppercase;
-	font-family: "Victor Mono";
+	font-family: Victor Mono;
 	color: var(--pure);
 }
 
